@@ -20,14 +20,12 @@ class App extends Component {
   render() {
       return (
           <div className="App">
-              {list.map(function (item) {
-                  return (
-                      <div key={item.listId}>
-                          <span><a href={item.url}>{item.title}</a></span>
-                          <span>{item.author}</span>
-                      </div>
-                  );
-              })}
+              {list.map(item =>
+                  <div key={item.listId}>
+                      <span><a href={item.url}>{item.title}</a></span>
+                      <span>{item.author}</span>
+                  </div>
+              )}
           </div>
       );
   }
